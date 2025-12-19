@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y bash coreutils \
 
 COPY . .
 
-RUN chmod +x run-tests.sh analyze_logs.sh
+RUN chmod +x run-tests.sh analyze_logs.sh     # 644 permission 
 
 CMD ["./run-tests.sh"]
 
