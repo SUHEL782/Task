@@ -1,0 +1,36 @@
+id: bash-log-analysis-hard
+name: Fix and Harden Bash Log Analyzer
+
+
+difficulty: hard
+category: cli-debugging
+
+
+description: |
+You are given a Bash-based CLI tool that analyzes a web server access log.
+The tool is intended to output the **top 3 client IP addresses by request count**
+in **descending order**, using a strict output format.
+
+
+The current implementation is incorrect and fails under multiple conditions.
+
+
+Your task is to:
+1. Debug and fix the counting logic
+2. Ensure correct sorting (descending by count, then IP lexicographically)
+3. Ensure output formatting exactly matches the specification
+4. Handle duplicate and unsorted log entries deterministically
+
+
+You must not modify test files or data files.
+
+
+constraints:
+- Use only standard Unix utilities (bash, sort, awk, uniq, cut)
+- Do not add new files
+- Do not modify tests or logs
+
+
+success_criteria:
+- run-tests.sh exits with status code 0
+- Output exactly matches expected format
